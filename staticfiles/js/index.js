@@ -59,3 +59,58 @@ window.onload  = function(){
     },
     });
 
+function mediaslide(y) {
+  if (y.matches) {
+    document.querySelector(".sc4_carts_swipper").classList = "swiper sc4_carts_swipper"
+    document.querySelector(".for_swiper-wrapper").classList = "swiper-wrapper for_swiper-wrapper"
+    let slide = document.querySelectorAll(".for_swiper-slide");
+    slide.forEach(function(e){
+      e.classList = "swiper-slide for_swiper-slide"
+    })
+    var main_sc4_swipper = new Swiper(".sc4_carts_swipper", {
+    slidesPerView: "auto",
+    spaceBetween: 1,
+    loop:false,
+    grabCursor: true,
+    // centeredSlides: true,
+    // autoplay: {
+    // delay: 2500,
+    // disableOnInteraction: false,
+    // },
+    pagination: {
+    el: ".swiper-pagination",
+    clickable: true,  
+    },
+    });
+  } 
+
+  else {
+    document.querySelector(".sc4_carts_swipper").classList = "sc4_carts_swipper"
+    document.querySelector(".for_swiper-wrapper").classList = "for_swiper-wrapper"
+    let slide = document.querySelectorAll(".for_swiper-slide");
+    slide.forEach(function(e){
+      e.classList = "for_swiper-slide"
+    })
+  }
+}
+
+var y = window.matchMedia("(max-width: 768px)")
+mediaslide(y)
+y.addListener(mediaslide) 
+
+var main_sc5_swipper = new Swiper(".sc5_swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 1,
+    loop:false,
+    grabCursor: true,
+    // centeredSlides: true,
+    // autoplay: {
+    // delay: 2500,
+    // disableOnInteraction: false,
+    // },
+    pagination: {
+    el: ".swiper-pagination",
+    clickable: true,  
+    },
+    });
+ 
