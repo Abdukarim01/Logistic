@@ -1,4 +1,5 @@
 /* HEADER NAVBAR CONTROL */
+
 let num = 0;
 function controlMenu(){
     num++
@@ -114,3 +115,18 @@ var main_sc5_swipper = new Swiper(".sc5_swiper", {
     },
     });
  
+
+window.onload = function(){
+ 
+  let cursors = document.querySelectorAll(".cursor");
+  
+  cursors.forEach(function(e){
+  let cursor_top = Math.floor(Math.random() * (5000 - 50 + 1) + 50);
+  let cursor_left = Math.floor(Math.random() * (95 - 5 + 1) + 5);
+  let cursor_rotate = Math.floor(Math.random() * 360);
+    e.style = `margin-top:${cursor_top}px;
+               left:${cursor_left}%;
+               transform:rotate(${cursor_rotate}deg);`
+  })
+}
+

@@ -4,6 +4,8 @@
 
 body,header,main,footer{width:100%; height:auto;}
 
+
+
 body,h1,h2,h3,h4,h5,h6,p{margin:0 ; padding:0;}
 
 button,input{outline:none !important;}
@@ -373,6 +375,12 @@ a:hover{color:inherit;}
 .footer_navbar_items:nth-child(4) ul li a:first-child{margin-right:15px; font-size:25px;}
 .footer_navbar_items:nth-child(4) a ul{margin-top: 20px;}
 .footer_navbar_items ul li{color: white; font-size:17px; padding:7px 0px;}
+
+
+.cursor{width:50px; position:absolute;z-index: 10; }
+
+.cursors{width:100%; height:auto;}
+
 /* MEDIAS MAX-WIDTH */
 
 @media(max-width: 1300px){
@@ -537,6 +545,7 @@ a:hover{color:inherit;}
   .inputs textarea{padding:5px 20px 8px 60px;}
   .inputs div input[type="checkbox"]{width:15px; height:15px;}
   .footer{padding:5% 0%;}
+  .cursors{display: none !important;}
 }
  
 @media(max-width: 576px){
