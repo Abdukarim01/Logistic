@@ -377,7 +377,7 @@ a:hover{color:inherit;}
 .footer_navbar_items ul li{color: white; font-size:17px; padding:7px 0px;}
 
 
-.cursor{width:50px; position:absolute;z-index: 10; }
+.cursor{width:50px; position:absolute;z-index: 8; }
 
 .cursors{width:100%; height:auto;}
 
