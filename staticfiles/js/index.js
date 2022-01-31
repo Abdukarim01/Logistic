@@ -1,14 +1,35 @@
 /* ONLOAD ANIMATIONS */
 window.onload  = function(){
-   let cursors = document.querySelectorAll(".cursor");
+  let cursors = document.querySelectorAll(".cursor");
   
   cursors.forEach(function(e){
+
   let cursor_top = Math.floor(Math.random() * (5000 - 50 + 1) + 50);
   let cursor_left = Math.floor(Math.random() * (95 - 5 + 1) + 5);
   let cursor_rotate = Math.floor(Math.random() * 360);
-    e.style = `margin-top:${cursor_top}px;
+  e.style = `width:50px; 
+              position:absolute;
+              z-index:-1 !important;
+              margin-top:${cursor_top}px;
                left:${cursor_left}%;
-               transform:rotate(${cursor_rotate}deg);`
+               transform:rotate(${cursor_rotate}deg);`;
+
+
+  
+  let animMove = Math.floor(Math.random() * (100 - 50 + 1) + 50)
+  e.animate([
+  // keyframes
+   {transform:'translateY(0px) translateX(0px)' },
+   {transform:`translateY(-${animMove+10}px) translateX(-${animMove+5}px) rotate(${animMove+2}deg)`},
+   {transform:`translateY(-${animMove+20}px) translateX(-${animMove+10}px) rotate(${animMove+4}deg)` },
+   {transform:`translateY(-${animMove+30}px) translateX(-${animMove+15}px) rotate(${animMove+6}deg)` },
+   {transform:`translateY(-${animMove+40}px) translateX(-${animMove+20}px) rotate(${animMove+8}deg)` }
+], {
+  // timing options
+  duration: 5000,
+  iterations: Infinity,
+
+})
   });
   document.querySelector(".sc1_text1").querySelector("h1").style = "transition: ease 2s; opacity:1;transform:translateX(0%);"
   setTimeout(()=>{
