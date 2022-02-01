@@ -1,36 +1,5 @@
-/* ONLOAD ANIMATIONS */
-window.onload  = function(){
-  let cursors = document.querySelectorAll(".cursor");
-  
-  cursors.forEach(function(e){
-
-  let cursor_top = Math.floor(Math.random() * (5000 - 50 + 1) + 50);
-  let cursor_left = Math.floor(Math.random() * (95 - 5 + 1) + 5);
-  let cursor_rotate = Math.floor(Math.random() * 360);
-  e.style = `width:50px; 
-              position:absolute;
-              z-index:-1 !important;
-              margin-top:${cursor_top}px;
-               left:${cursor_left}%;
-               transform:rotate(${cursor_rotate}deg);`;
-
-
-  
-  let animMove = Math.floor(Math.random() * (100 - 50 + 1) + 50)
-  e.animate([
-  // keyframes
-   {transform:'translateY(0px) translateX(0px)' },
-   {transform:`translateY(-${animMove+10}px) translateX(-${animMove+5}px) rotate(${animMove+2}deg)`},
-   {transform:`translateY(-${animMove+20}px) translateX(-${animMove+10}px) rotate(${animMove+4}deg)` },
-   {transform:`translateY(-${animMove+30}px) translateX(-${animMove+15}px) rotate(${animMove+6}deg)` },
-   {transform:`translateY(-${animMove+40}px) translateX(-${animMove+20}px) rotate(${animMove+8}deg)` }
-], {
-  // timing options
-  duration: 5000,
-  iterations: Infinity,
-
-})
-  });
+/* SCOLLING */
+window.onload = ()=>{
   document.querySelector(".sc1_text1").querySelector("h1").style = "transition: ease 2s; opacity:1;transform:translateX(0%);"
   setTimeout(()=>{
     document.querySelector(".sc1_text2").querySelector('p').style = "transform: translateX(0%); opacity:1; transition: ease 2s;"
@@ -38,7 +7,74 @@ window.onload  = function(){
   setTimeout(()=>{
     document.querySelector(".sc1_clip_btn ").querySelector('button').style = "transform: translateX(0%); opacity:1; transition: ease 2s;"
   },1000)
+}
+window.addEventListener('scroll', function() {
+ /* ANIM1 */
+ var element = document.querySelector('.section_items1 ').querySelector(".servis_text_block");
+  var position = element.getBoundingClientRect();
+  if(position.top < window.innerHeight - 350) {
+    element.style = "transform:translateX(0%); opacity: 1; transition: ease 1.5s;"
+  }else{
+    element.style = "transform:translateX(-50%); opacity: 0; transition: all 1.5s;"
   }
+
+  var element2 = document.querySelector('.section_items1 ').querySelector(".servis_image_block");
+  var position2 = element.getBoundingClientRect();
+  if(position2.top < window.innerHeight - 250) {
+    element2.style = "transform:translateX(0%); opacity: 1; transition: ease 1.5s;"
+  }else{
+    element2.style = "transform:translateX(50%); opacity: 0; transition: all 1.5s;"
+  }
+ /*ENDANIM1*/
+
+/* ANIM2*/
+ var element3 = document.querySelector('.section_items2 ').querySelector(".servis_text_block");
+  var position3 = element3.getBoundingClientRect();
+  if(position3.top < window.innerHeight - 350) {
+    element3.style = "transform:translateX(0%); opacity: 1; transition: ease 1.5s;"
+  }else{
+    element3.style = "transform:translateX(50%); opacity: 0; transition: all 1.5s;"
+  }
+
+  var element4 = document.querySelector('.section_items2').querySelector(".servis_image_block");
+  var position4 = element4.getBoundingClientRect();
+  if(position4.top < window.innerHeight - 250) {
+    element4.style = "transform:translateX(0%); opacity: 1; transition: ease 1.5s;"
+  }else{
+    element4.style = "transform:translateX(-50%); opacity: 0; transition: all 1.5s;"
+  }
+/*ENDANIM2*/
+
+/* ANIM3 */
+let scroll = Math.floor(window.scrollY);
+if(scroll <= 650){
+  document.querySelector(".sc1_text1").querySelector("h1").style = "transition: ease 2s; opacity:1;transform:translateX(0%);"
+  setTimeout(()=>{
+    document.querySelector(".sc1_text2").querySelector('p').style = "transform: translateX(0%); opacity:1; transition: ease 2s;"
+  },500)
+  setTimeout(()=>{
+    document.querySelector(".sc1_clip_btn ").querySelector('button').style = "transform: translateX(0%); opacity:1; transition: ease 2s;"
+  },1000)
+}else{
+  document.querySelector(".sc1_text2").querySelector('p').style = "transform: translateX(-20%); opacity:0; transition: ease 0.5s;"
+  document.querySelector(".sc1_clip_btn ").querySelector('button').style = "transform: translateX(-80%);opacity: 0;transition: ease 0.5s;"
+  document.querySelector(".sc1_text1").querySelector("h1").style = "transition: ease 0.5s; opacity:0;transform:translateX(-40%);"
+  
+}
+
+/* ENDANIM3 */
+
+/* ANIM4 */
+let cards = document.querySelectorAll(".for_swiper-slide");
+cards.forEach((e,index)=>{
+  let csrdposition = e.getBoundingClientRect();
+  if(csrdposition.top < window.innerHeight - 150){
+    e.style = "transform: translateX(0%); opacity: 1;transition: ease 1.5s"
+  }
+})
+/* ENDANIM4 */
+
+});
 
 /* HEADER NAVBAR CONTROL */
 let num = 0;
