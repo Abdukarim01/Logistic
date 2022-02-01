@@ -12,7 +12,7 @@ window.addEventListener('scroll', function() {
  /* ANIM1 */
  var element = document.querySelector('.section_items1 ').querySelector(".servis_text_block");
   var position = element.getBoundingClientRect();
-  if(position.top < window.innerHeight - 350) {
+  if(position.top < window.innerHeight - 250) {
     element.style = "transform:translateX(0%); opacity: 1; transition: ease 1.5s;"
   }else{
     element.style = "transform:translateX(-50%); opacity: 0; transition: all 1.5s;"
@@ -20,7 +20,7 @@ window.addEventListener('scroll', function() {
 
   var element2 = document.querySelector('.section_items1 ').querySelector(".servis_image_block");
   var position2 = element.getBoundingClientRect();
-  if(position2.top < window.innerHeight - 250) {
+  if(position2.top < window.innerHeight - 450) {
     element2.style = "transform:translateX(0%); opacity: 1; transition: ease 1.5s;"
   }else{
     element2.style = "transform:translateX(50%); opacity: 0; transition: all 1.5s;"
