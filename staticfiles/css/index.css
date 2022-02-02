@@ -4,13 +4,11 @@
 
 body,header,main,footer{width:100%; height:auto;}
 
-
-
 body,h1,h2,h3,h4,h5,h6,p{margin:0 ; padding:0;}
 
 button,input{outline:none !important;}
 
-
+main{max-width:100%; overflow: hidden;}
 
 ul,li{margin:0; padding:0; list-style: none;}
 
@@ -378,13 +376,11 @@ a:hover{color:inherit;}
 .footer_navbar_items:nth-child(1) ul li a:first-child{margin-right:15px; font-size:25px;}
 
 .footer_navbar_items:nth-child(4) ul li a:first-child{margin-right:15px; font-size:25px;}
+
 .footer_navbar_items:nth-child(4) a ul{margin-top: 20px;}
+
 .footer_navbar_items ul li{color: white; font-size:17px; padding:7px 0px;}
 
-
-
-
-.cursors{max-width:100%; height:auto; overflow-x: hidden;}
 
 /* MEDIAS MAX-WIDTH */
 
@@ -478,7 +474,7 @@ a:hover{color:inherit;}
                         clip-path: polygon(100% 0, 100% 4.5%, 85% 100%, 0 100%, 0% 60%, 0 0);}
   .servis_text_block h1{font-size:30px;}
   .servis_text_block p{font-size:16px; margin-top:15px;}
-  .servis_image1,.servis_image2{height:50vw; background-position:center;}
+  .servis_image1,.servis_image2{height:40vw; background-position:center;}
   .sc3_text_block{padding-right:20%;}
   .sc3_text_block h1{font-size:35px;}
   .sc3_text_block p{font-size:19px;}
@@ -551,7 +547,7 @@ a:hover{color:inherit;}
   .inputs div input[type="checkbox"]{width:15px; height:15px;}
   .footer{padding:5% 0%;}
   .inp_icon{transform: translateX(15px);}
-  .cursors{display: none !important;}
+  .cursor{display: none !important;}
 }
  
 @media(max-width: 576px){

@@ -1,5 +1,15 @@
+
 /* SCOLLING */
 window.onload = ()=>{
+  let pulses = document.querySelectorAll(".pulse_container");
+  let cursors = document.querySelectorAll(".cursor");
+  cursors.forEach(function(e,index){
+  let cursor_top = Math.floor(Math.random() * (700 - 110 + 1) + 110 )
+  let cursor_left = Math.floor(Math.random() * (90 - 5 + 1) + 5 )
+  let cursor_rotate = Math.floor(Math.random() * (360 - 10 + 1) + 10 )
+    e.style = `position:absolute; top:${cursor_top}%; margin-left:${cursor_left}%; transition:ease 0.4s;`;
+   
+  })
   document.querySelector(".sc1_text1").querySelector("h1").style = "transition: ease 2s; opacity:1;transform:translateX(0%);"
   setTimeout(()=>{
     document.querySelector(".sc1_text2").querySelector('p').style = "transform: translateX(0%); opacity:1; transition: ease 2s;"
@@ -73,6 +83,10 @@ cards.forEach((e,index)=>{
   }
 })
 /* ENDANIM4 */
+
+/* ANIM5 */
+
+/* ENDANIM5 */
 
 });
 
@@ -177,15 +191,12 @@ var main_sc5_swipper = new Swiper(".sc5_swiper", {
     loop:false,
     grabCursor: true,
     // centeredSlides: true,
-    // autoplay: {
-    // delay: 2500,
-    // disableOnInteraction: false,
-    // },
+    autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+    },
     pagination: {
     el: ".swiper-pagination",
     clickable: true,  
     },
     });
- 
-
-
