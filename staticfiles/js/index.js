@@ -1,4 +1,16 @@
+var acc = document.querySelectorAll(".swiper_carts");
+var i;
 
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
 /* SCOLLING */
 window.onload = ()=>{
   let pulses = document.querySelectorAll(".pulse_container");
@@ -83,10 +95,6 @@ cards.forEach((e,index)=>{
   }
 })
 /* ENDANIM4 */
-
-/* ANIM5 */
-
-/* ENDANIM5 */
 
 });
 
@@ -200,3 +208,4 @@ var main_sc5_swipper = new Swiper(".sc5_swiper", {
     clickable: true,  
     },
     });
+
