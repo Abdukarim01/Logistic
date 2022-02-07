@@ -1,2 +1,0 @@
-# Logistic
-for logistic 

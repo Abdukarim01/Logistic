@@ -31,7 +31,7 @@ a:hover{color:inherit;}
         linear-gradient(120deg, #364c6e 5%,
           rgba(0, 0, 0, 0.33), 
           rgba(0, 0, 0, 0.33)), 
-          url(../img/header_truck.png);
+          url(/static/img/header_truck.png);
         background-size:cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -148,7 +148,7 @@ a:hover{color:inherit;}
 .main_sc2_swipper{width: 100%; height:auto; 
                   padding:0px 0px 40px 0px;}
 
-.main_sc2_swipper .swiper-wrapper .swiper-slide{width:auto;height:auto;}
+.main_sc2_swipper .swiper-wrapper .swiper-slide{width:auto;height:auto; transition: all 0.5s;}
 
 .main_sc2_carousel_carst{
   width:/* 33.28% */ 350px;min-height:310px;
@@ -156,7 +156,7 @@ a:hover{color:inherit;}
   background-size:100% 100%;
 }
 
-.m_sc2_cart_img1,.m_sc2_cart_img2,.m_sc2_cart_img3{width:100%; text-align: center;}
+.m_sc2_cart_img1,.m_sc2_cart_img2,.m_sc2_cart_img3{width:100%; text-align: center; transition: all 0.5s;}
 
 .m_sc2_cart_img1 a img,.m_sc2_cart_img2 a img,.m_sc2_cart_img3 a img{width:25%; margin:0px auto -20% auto; transform: translateX(15%); }
 
@@ -227,13 +227,20 @@ a:hover{color:inherit;}
                       url(../img/sc3img.png);
                     }
 
-.sc3_text_block{width:100%; padding-left:5%; padding-right:45%;}
+.sc3_text_block{width:100%; padding-left:5%;  padding-right:5%;
+                display:flex; flex-direction: row; align-items:center;
+                justify-content:inherit;}
 
-.sc3_text_block h1{color:#ffc000;font-family: 'Heebo', sans-serif; 
+
+.sc3_text_block h1{color:#ffc000;font-family: 'Heebo', sans-serif;
                   font-size:40px; padding:3px 0px 3px 30px;
-                  border-left:4px solid #ffc000;}
+                  border-left:4px solid #ffc000;
+                }
+.sc3_text_block div{flex:50%;}
 
 .sc3_text_block p{font-size:23px; margin-top:30px;font-family: 'Quicksand', sans-serif; color: white;}
+
+.sc3_text_block h1 div{margin-top:10px;}
 
 .mobile_text{display: none;}
 
@@ -345,7 +352,7 @@ a:hover{color:inherit;}
 .inputs textarea{width:100%; height:80px; border: none; outline: none;
                 clip-path: polygon(4% 0, 100% 0, 100% 10%, 96% 100%, 0 100%, 0 90%);
                  border-top-right-radius:5px;
-                  border-bottom-left-radius:5px; padding:5px 20px 8px 70px;
+                  border-bottom-left-radius:5px; padding:5px 20px 8px 80px;
                   color:rgba(0,0,0,0.8); font-size:19px;}
 
 .textarea_icon{position: absolute; z-index:5; padding:0px 10px;
@@ -381,7 +388,10 @@ a:hover{color:inherit;}
 
 .footer_navbar_items ul li{color: white; font-size:17px; padding:7px 0px;}
 
-
+.main_sc2_swipper .swiper-wrapper .swiper-slide:hover{transform:translateY(-15px); transition: all 0.5s;}
+.main_sc2_swipper .swiper-wrapper .swiper-slide:hover .m_sc2_cart_img1{transform:translateY(15px); transition: all 0.5s;}
+.main_sc2_swipper .swiper-wrapper .swiper-slide:hover .m_sc2_cart_img2{transform:translateY(15px); transition: all 0.5s;}
+.main_sc2_swipper .swiper-wrapper .swiper-slide:hover .m_sc2_cart_img3{transform:translateY(15px); transition: all 0.5s;}
 /* MEDIAS MAX-WIDTH */
 
 @media(max-width: 1300px){
@@ -409,7 +419,7 @@ a:hover{color:inherit;}
   .sc2_navbar_menu ul li {font-size:17px; padding:5px;}
   .main_sc2_item{width:100%;}
   .main_sc2_item_carousel{margin-top:-200px;}
-  .sc3_text_block{padding-right:40%;}
+
 }
 
 @media(max-width: 1100px){
@@ -421,7 +431,6 @@ a:hover{color:inherit;}
   .cart_text_block2{transform: translateY(110px);}
   .cart_text_block2 p {font-size:15px;}
   .main_servises1_item,.main_servises2_item{width:100%;}
-  .sc3_text_block{padding-right:35%;}
   .swiper_texts{font-size:18px;}
   .sc5_slide{width:310px;}
   .sc5_slide_cart{height:270px;}
@@ -475,7 +484,6 @@ a:hover{color:inherit;}
   .servis_text_block h1{font-size:30px;}
   .servis_text_block p{font-size:16px; margin-top:15px;}
   .servis_image1,.servis_image2{height:40vw; background-position:center;}
-  .sc3_text_block{padding-right:20%;}
   .sc3_text_block h1{font-size:35px;}
   .sc3_text_block p{font-size:19px;}
   .swiper_texts{font-size:15px;}
@@ -552,6 +560,8 @@ a:hover{color:inherit;}
   .footer{padding:5% 0%;}
   .inp_icon{transform: translateX(15px);}
   .cursor{display: none !important;}
+  .inputs div input{padding-left:65px;}
+  .sc3_text_block div{flex:100%; min-width:100%;}
 }
  
 @media(max-width: 576px){

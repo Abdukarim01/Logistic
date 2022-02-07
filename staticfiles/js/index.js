@@ -1,3 +1,28 @@
+//if( window.history.replaceState ) {
+//  window.history.replaceState( null, null, window.location.href );
+//  }
+//    document.body.onload = function (){
+//           document.getElementById("form").reset()
+//    }
+
+
+function randomValues() {
+  anime({
+    targets: '.cursor',
+    translateX: function() {
+      return -anime.random(0, 500);
+    },
+     translateY: function() {
+      return -anime.random(0, 800);
+    },
+    easing: 'easeInOutQuad',
+    duration: 750,
+    complete: randomValues,
+  
+  });
+}
+randomValues()
+
 var acc = document.querySelectorAll(".swiper_carts");
 var i;
 
@@ -13,6 +38,7 @@ for (i = 0; i < acc.length; i++) {
 }
 /* SCOLLING */
 window.onload = ()=>{
+
   let pulses = document.querySelectorAll(".pulse_container");
   let cursors = document.querySelectorAll(".cursor");
   cursors.forEach(function(e,index){
