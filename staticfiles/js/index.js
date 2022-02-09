@@ -235,3 +235,28 @@ var main_sc5_swipper = new Swiper(".sc5_swiper", {
     },
     });
 
+
+var main_sc5_swipper = new Swiper(".new_section_swiper1", {
+    slidesPerView: "auto",
+    spaceBetween: 1,
+    centeredSlides: true,
+    loop:false,
+    grabCursor: true,
+    autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+    },
+    
+    });
+
+var main_sc5_swipper = new Swiper(".new_section_swiper2", {
+    slidesPerView: "auto",
+    spaceBetween: 1,
+    loop:false,
+    grabCursor: true,
+    autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+    },
+    
+    });

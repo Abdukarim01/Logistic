@@ -392,6 +392,21 @@ a:hover{color:inherit;}
 .main_sc2_swipper .swiper-wrapper .swiper-slide:hover .m_sc2_cart_img1{transform:translateY(15px); transition: all 0.5s;}
 .main_sc2_swipper .swiper-wrapper .swiper-slide:hover .m_sc2_cart_img2{transform:translateY(15px); transition: all 0.5s;}
 .main_sc2_swipper .swiper-wrapper .swiper-slide:hover .m_sc2_cart_img3{transform:translateY(15px); transition: all 0.5s;}
+
+/* START MAIN NEW SECTION  */
+
+.main_new_section{width:100%; height:auto; margin:40px 0px;}
+
+.new_section_swiper1,.new_section_swiper2{width:100%; height: auto; margin-top:80px;}
+
+.new_slide{width:auto; height:auto;  padding:0px 40px;}
+
+.new_slide a img{width:300px; height:75px;}
+
+.new_slide a{cursor: inherit;}
+
+/* END MAIN NEW SECTION  */
+
 /* MEDIAS MAX-WIDTH */
 
 @media(max-width: 1300px){
@@ -412,6 +427,7 @@ a:hover{color:inherit;}
   .client_stars i{font-size:20px;}
   .sign_up_inputs{height: auto; padding:2% 0%;}
   .sign_up_map{height:500px;}
+  .new_section_swiper1,.new_section_swiper2{margin-top:70px;}
 }
 
  @media(max-width: 1200px){
@@ -448,6 +464,8 @@ a:hover{color:inherit;}
   .footer_navbar_items:nth-child(3){flex:30%; min-width:30%;}
   .footer_navbar_items:nth-child(4){flex:20%; min-width:20%;}
   .footer_navbar_items ul li{font-size:15px;}
+  .new_slide{padding: 0px 30px;}
+  .new_slide a img{width:300px; height:65px;}
 }
 
 @media(max-width: 992px){
@@ -562,6 +580,8 @@ a:hover{color:inherit;}
   .cursor{display: none !important;}
   .inputs div input{padding-left:65px;}
   .sc3_text_block div{flex:100%; min-width:100%;}
+  .new_slide a img{width:250px; height:55px;}
+  .new_section_swiper1,.new_section_swiper2{margin-top:40px;}
 }
  
 @media(max-width: 576px){
@@ -595,6 +615,9 @@ a:hover{color:inherit;}
   .clients_things_text h1{font-size:25px;}
   .clients_about_cart p{font-size:19px;}
   .footer{padding:8% 0%;}
+  .new_slide a img{width:200px; height:45px;}
+  .new_slide{padding:0px 20px;}
+  .new_section_swiper1,.new_section_swiper2{margin-top:30px;}
   }
 
 @media(max-width: 400px){
@@ -619,6 +642,7 @@ a:hover{color:inherit;}
 @media (min-width: 1200px){
   /* .container_cargo{max-width: 1392px;} */
   .container_cargo{max-width: 1760px;}
+
 }
 
 @media(min-width:1650px){
@@ -638,6 +662,8 @@ a:hover{color:inherit;}
   .sc5_slide_cart{height:350px;}
   .sign_up_map{height:650px; clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%, 0 96%);border-bottom-left-radius:20px; overflow: hidden;}
   .sign_up_inputs{height:auto;}
+  .new_slide{padding: 0px 50px;}
+  .new_slide a img{width:350px; height:75px;}
 }
 
 @media(min-width:1900px){
@@ -679,7 +705,10 @@ a:hover{color:inherit;}
  .inputs div input{height:60px; font-size:20px; padding:5px 30px 8px 70px;}
  .inp_icon{margin-top:20px; transform: translateX(15px);}
  .inputs textarea{height:110px; padding:5px 30px 8px 80px;}
+ .new_slide{padding: 0px 60px;}
+ .new_slide a img{width:450px; height:100px;}
 }
+
 
 
 /* STYLES FOR SCROLLBAR */
