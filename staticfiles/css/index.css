@@ -504,7 +504,8 @@ a:hover{color:inherit;}
                                     padding-right:10px;
                                     cursor: pointer;}
 
-
+.registred{font-family: 'Quicksand', sans-serif;
+          text-align: center; color: red;}
 /* MEDIAS MAX-WIDTH */
 
 @media(max-width: 1300px){

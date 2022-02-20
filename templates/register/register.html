@@ -33,6 +33,11 @@
                 <div class="modal_title">
                     <p>Driver’s Application</p>
                 </div>
+                {% if registred %}
+                <h1 class="registred">
+                    You have registred already
+                </h1>
+                {% endif %}
                 <form action="" method="POST">
                     {% csrf_token %}
                		<div class="forms">

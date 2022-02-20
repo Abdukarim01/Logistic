@@ -33,6 +33,7 @@ def home(request):
 
 
 def register(request):
+    registred = False
     if request.method == "POST":
         form = RegisterModelForms(request.POST)
         form.save(commit=False)
@@ -43,6 +44,14 @@ def register(request):
                 return redirect("/")
             else:
                 pass
+        else:
+            registred = True
+            context = {
+            "form":form,
+            "registred":registred
+            }
+
+            return render(request,'register/register.html',context)
     else:   
         form = RegisterModelForms()   
 
