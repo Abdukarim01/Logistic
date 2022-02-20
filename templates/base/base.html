@@ -28,6 +28,7 @@
 </head>
 <body>
     <div class="curtain"></div>
+    
     <header class="header">
         <section class="header_first_section">
             <div class="container_cargo">
@@ -43,7 +44,7 @@
                         </p>
                     </div>
                     <div class="sc1_clip_btn">
-                        <a>
+                        <a href="{% url 'main:register' %}">
                             <button>Apply to drive</button>
                         </a>
                     </div>
@@ -133,14 +134,7 @@
                                +1 380 444 4884
                            </a>
                        </li>
-                       <li>
-                           <a>
-                               <i class="fas fa-clock"></i>
-                           </a>
-                           <a>
-                               Monday - Friday (9:30 - 18:00)
-                           </a>
-                       </li>
+                      
                        <li>
                            <a>
                                <i class="fas fa-envelope"></i>
@@ -175,7 +169,7 @@
                </div>
                <div class="footer_navbar_items">
                    <h1>
-                       Business <br> hours
+                       Business hours
                    </h1>
                    <ul>
                        <li>

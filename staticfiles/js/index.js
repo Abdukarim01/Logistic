@@ -1,11 +1,3 @@
-//if( window.history.replaceState ) {
-//  window.history.replaceState( null, null, window.location.href );
-//  }
-//    document.body.onload = function (){
-//           document.getElementById("form").reset()
-//    }
-
-
 function randomValues() {
   anime({
     targets: '.cursor',
@@ -36,7 +28,7 @@ for (i = 0; i < acc.length; i++) {
     } 
   });
 }
-/* SCOLLING */
+
 window.onload = ()=>{
 
   let pulses = document.querySelectorAll(".pulse_container");
@@ -260,3 +252,18 @@ var main_sc5_swipper = new Swiper(".new_section_swiper2", {
     },
     
     });
+
+
+let element = document.querySelectorAll(".client_comment");
+element.forEach((e)=>{
+  e.addEventListener('click', function(){
+        var panel = this;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            panel.style.transform = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            panel.style.transform = 'skew(-9deg)'
+          }
+  })  
+})
