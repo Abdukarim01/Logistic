@@ -140,11 +140,25 @@ function mediaNavbar(x) {
                        document.body.style = "position:fixed;";
                        document.querySelector(".navbar_control").querySelector("i").classList = "fa fa-times"
                       }
+
+          document.querySelectorAll(".navbar_href").forEach(function(e){
+            e.onclick = function(){
+              num = 0
+              growDiv.style.height = "0px";
+                       growDiv.style = "border-bottom:none;";
+                       document.body.style = "position:inherit;";
+                       document.querySelector(".navbar_control").querySelector("i").classList = "fa fa-bars"
+                       setTimeout(()=>{
+                        document.querySelector(".curtain").style = "display:none;"
+                },400) 
+            }
+          })
   }else {
     growDiv.style = ""
     num = 0
     document.querySelector(".curtain").style = "display:none;"
   }
+
 }
 
 var x = window.matchMedia("(max-width: 992px)")
@@ -249,6 +263,7 @@ var main_sc5_swipper = new Swiper(".new_section_swiper2", {
     autoplay: {
     delay: 3500,
     disableOnInteraction: false,
+    reverseDirection: true,
     },
     
     });
@@ -267,3 +282,8 @@ element.forEach((e)=>{
           }
   })  
 })
+
+
+document.querySelector("#form").onsubmit = function(){
+  history.replaceState(null, null, ' ');
+}

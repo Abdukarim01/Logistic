@@ -1,5 +1,9 @@
 /* IMPORTANT STYLES  */
 
+html {
+  scroll-behavior: smooth;
+}
+
 *{box-sizing: border-box;}
 
 body,header,main,footer{width:100%; height:auto;}
@@ -506,6 +510,14 @@ a:hover{color:inherit;}
 
 .registred{font-family: 'Quicksand', sans-serif;
           text-align: center; color: red;}
+
+.back_to_home h1{color: #FFCE4E; margin-bottom:2%;
+                font-family: 'Heebo', sans-serif; 
+                font-size:30px;
+                text-decoration: underline;}
+
+/* .new_section_swiper1{width:110%;
+                    margin-left:-10%;} */
 /* MEDIAS MAX-WIDTH */
 
 @media(max-width: 1300px){
@@ -664,6 +676,7 @@ a:hover{color:inherit;}
   .main_fourth_section{margin:40px 0px; padding:0% 1% 0% 1%;}
   .sc4_carts_swipper{padding-bottom: 40px;}
   .about_us_text h1{font-size:30px; padding-left:10px;}
+  .back_to_home h1{font-size:25px;}
   .sc5_slide{width:270px;}
   .sc5_slide_cart{min-height:240px; width:105%;}
   .clients_things_text h1{font-size:30px; padding-left:10px;}
@@ -702,6 +715,7 @@ a:hover{color:inherit;}
   .grid_input_in:nth-child(8) textarea{height:75px; font-size:15px;  padding: 10px 10px 0px 15px;
                                       clip-path: polygon(2% 0, 100% 0, 100% 15%, 98% 100%, 0 100%, 0 85%);}
   .grid_input_in input[type="submit"]{width:250px;}
+  .about_clients{padding-top:10px;}
 }
  
 @media(max-width: 576px){
@@ -732,6 +746,7 @@ a:hover{color:inherit;}
   .sc3_text_block h1{font-size:22px;border-left:3px solid #ffc000; letter-spacing: 1px;}
   .main_second_section{margin:40px 0px 10px 0px;}
   .about_us_text h1{font-size:25px; padding-left:10px;}
+  .back_to_home h1{font-size:20px;}
   .clients_things_text h1{font-size:25px;}
   .footer{padding:8% 0%;}
   .new_slide a img{width:200px; height:45px;}
