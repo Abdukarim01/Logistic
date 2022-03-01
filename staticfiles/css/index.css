@@ -236,10 +236,14 @@ a:hover{color:inherit;}
                 justify-content:inherit;}
 
 
-.sc3_text_block h1{color:#ffc000;font-family: 'Heebo', sans-serif;
+.sc3_text_block h1:nth-child(1){color:#ffc000;font-family: 'Heebo', sans-serif;
                   font-size:33px; padding:3px 0px 3px 30px;
                   border-left:4px solid #ffc000;
                 }
+
+.sc3_text_block h1:nth-child(2){color:#fff;font-family: 'Heebo', sans-serif;
+                  font-size:33px; padding:3px 0px 3px 30px;}
+              
 .sc3_text_block div{flex:50%;}
 
 .sc3_text_block p{font-size:23px; margin-top:30px;font-family: 'Quicksand', sans-serif; color: white;}
