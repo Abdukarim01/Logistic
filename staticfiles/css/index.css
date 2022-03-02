@@ -242,8 +242,16 @@ a:hover{color:inherit;}
                 }
 
 .sc3_text_block h1:nth-child(2){color:#fff;font-family: 'Heebo', sans-serif;
-                  font-size:33px; padding:3px 0px 3px 30px;}
-              
+                  font-size:33px; padding:3px 0px 3px 0px;}
+       
+.for_circle{width:10px;
+            height:10px;
+            background-color: white;
+            border-radius: 50%;
+            display: inline-block;
+            margin-bottom:1%;
+            margin-right:20px;}
+
 .sc3_text_block div{flex:50%;}
 
 .sc3_text_block p{font-size:23px; margin-top:30px;font-family: 'Quicksand', sans-serif; color: white;}
@@ -522,6 +530,8 @@ a:hover{color:inherit;}
 
 /* .new_section_swiper1{width:110%;
                     margin-left:-10%;} */
+
+
 /* MEDIAS MAX-WIDTH */
 
 @media(max-width: 1300px){
@@ -667,6 +677,7 @@ a:hover{color:inherit;}
   .section_items2{flex-direction: column-reverse; margin-top:30px; }
   .section_items2 .servis_text_block{margin-bottom:20px;}
   .sc3_text_block h1{font-size:30px; padding-left:10px;}
+ 
   .sc3_text_block p{display: none;}
   .mobile_text{display:block; padding:0px 10px;font-family: 'Quicksand', sans-serif;}
   .for_swiper-slide{width:200px; height: auto; padding: 0 !important; margin-bottom: 0;
@@ -747,7 +758,8 @@ a:hover{color:inherit;}
   .servis_text_block p{font-size:15px; margin-top:15px;}
   .servis_image1{clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%, 0 92%);}
   .servis_image2{clip-path: polygon(0 0, 100% 0, 100% 8%, 80% 100%, 0 100%, 0% 50%);}
-  .sc3_text_block h1{font-size:22px;border-left:3px solid #ffc000; letter-spacing: 1px;}
+  .sc3_text_block h1:nth-child(1){font-size:22px;border-left:3px solid #ffc000; letter-spacing: 1px;}
+  .sc3_text_block h1:nth-child(2){font-size:22px;letter-spacing: 1px;}
   .main_second_section{margin:40px 0px 10px 0px;}
   .about_us_text h1{font-size:25px; padding-left:10px;}
   .back_to_home h1{font-size:20px;}

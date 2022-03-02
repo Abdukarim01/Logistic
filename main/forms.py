@@ -10,11 +10,11 @@ class QuoteModelForms(ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['name'].widget.attrs['placeholder'] = 'name'
+        self.fields['name'].widget.attrs['placeholder'] = 'Name'
         self.fields['email'].widget.attrs['placeholder'] = 'E-mail'
         self.fields['tel'].widget.attrs['placeholder'] = '+1(__)-__-__'
-        self.fields['company_name'].widget.attrs['placeholder'] = 'company name'
-        self.fields['mc'].widget.attrs['placeholder'] = 'mc#'
+        self.fields['company_name'].widget.attrs['placeholder'] = 'Company name'
+        self.fields['mc'].widget.attrs['placeholder'] = 'MC#'
 
 class RegisterModelForms(ModelForm):
     class Meta:
