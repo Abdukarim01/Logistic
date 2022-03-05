@@ -2,6 +2,8 @@ from django.shortcuts import render,redirect
 from .forms import QuoteModelForms,RegisterModelForms
 from .bot import send_form_bot,send_form_bot_drivers
 from .models import QuoteModel,Drivers
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 def home(request):
@@ -12,8 +14,12 @@ def home(request):
         if not QuoteModel.objects.filter(tel=request.POST.get('tel')):
             if form.is_valid():
                 form.save(commit=True)
-                send_form_bot('Quote',request.POST.get('name'),request.POST.get('email'),request.POST.get('tel'),request.POST.get('company_name'),request.POST.get('mc'),request.POST.get('dry_van'),request.POST.get('reefer'),request.POST.get('flat_bed'),request.POST.get('message'),request.POST.get('need_driver_assistence'))
-                return redirect("/")
+                send_form_bot('Quote',form.data.get('name'),form.data.get('email'),form.data.get('tel'),form.data.get('company_name'),form.data.get('mc'),form.data.get('dry_van'),form.data.get('reefer'),form.data.get('flat_bed'),form.data.get('message'),form.data.get('need_driver_assistence'))
+                context = {
+                "form": form,
+                "success":True
+                }
+                return render(request, 'main/index.html', context)
             else:
                 pass
         else:
@@ -40,8 +46,13 @@ def register(request):
         if not Drivers.objects.filter(phone=request.POST.get('phone')):
             if form.is_valid():
                 form.save(commit=True)
-                send_form_bot_drivers('Driver',request.POST.get('first_name'),request.POST.get('last_name'),request.POST.get('email'),request.POST.get('phone'),request.POST.get('driver_license'),request.POST.get('state'),request.POST.get('driving_information'),request.POST.get('how_many_years'),request.POST.get('previus_employer'),request.POST.get('which_position'))
-                return redirect("/")
+                send_form_bot_drivers('Driver',form.data.get('first_name'),form.data.get('last_name'),form.data.get('email'),form.data.get('phone'),form.data.get('driver_license'),form.data.get('state'),form.data.get('driving_information'),form.data.get('how_many_years'),form.data.get('previus_employer'),form.data.get('which_position'))
+                registred = True
+                context = {
+                "form":QuoteModelForms(),
+                "success_register":registred
+                }
+                return render(request,'main/index.html',context)
             else:
                 pass
         else:

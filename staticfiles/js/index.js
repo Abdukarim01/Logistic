@@ -1,3 +1,14 @@
+
+
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+  }
+document.body.onload = function (){
+       document.getElementById("form").reset()
+       document.getElementById("form_register").reset()
+}
+
+
 function randomValues() {
   anime({
     targets: '.cursor',
@@ -284,6 +295,3 @@ element.forEach((e)=>{
 })
 
 
-document.querySelector("#form").onsubmit = function(){
-  history.replaceState(null, null, ' ');
-}

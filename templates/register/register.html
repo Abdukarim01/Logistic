@@ -44,8 +44,11 @@
                 <h1 class="registred">
                     You have registred already
                 </h1>
+                <script>
+                    alert("You have registred before")
+                </script>
                 {% endif %}
-                <form action="" method="POST">
+                <form action="" method="POST" id="form_register">
                     {% csrf_token %}
                		<div class="forms">
                 		<div class="grid_input">

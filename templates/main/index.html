@@ -1,6 +1,15 @@
 {% extends 'base/base.html' %}
 {% block content %}
-
+{% if success_register %}
+<script>
+    alert("Successfull")
+</script>
+{% endif %}
+{% if success %}
+<script>
+    alert("Successfull")
+</script>
+{% endif %}
  <main>
            <img src="/static/img/Vector4.png" alt="" class="cursor">
            <img src="/static/img/Vector9.png" alt="" class="cursor">
@@ -538,9 +547,12 @@ Great group of individuals to work with. Honest, hardworking, respectful, great 
                    {% if added %}
                    <div class="text-center" style="margin-top:-10px;">
                        <h4 class="text-danger cart-title m-0 p-0">
-                           You have added quote before
+                           You written quote before
                        </h4>
                    </div>
+                   <script>
+                       alert("You have written before")
+                   </script>
                    {% endif %}
                    <form action="" method="POST" id="form">
                       <div class="inputs">
