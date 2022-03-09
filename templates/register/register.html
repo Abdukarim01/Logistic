@@ -40,15 +40,7 @@
                 <div class="modal_title">
                     <p>Driver’s Application</p>
                 </div>
-                {% if registred %}
-                <h1 class="registred">
-                    You have registred already
-                </h1>
-                <script>
-                    alert("You have registred before")
-                </script>
-                {% endif %}
-                <form action="" method="POST" id="form_register">
+                <form action="" method="POST" id="form2">
                     {% csrf_token %}
                		<div class="forms">
                 		<div class="grid_input">
@@ -124,6 +116,37 @@
             </div>
         </div>
     </section>
+<script>
+let form = document.querySelector("#form2");
+form.addEventListener("submit", e=>{
 
+let fd = new URLSearchParams(Array.from(new FormData(form))).toString()
+e.preventDefault();
+var http = new XMLHttpRequest();
+http.open('POST', '', true)
+http.onreadystatechange = function(){
+    if (http.readyState === 4 && http.status === 200) {
+        let res = JSON.parse(this.response)
+        if (res.status == 200){
+        alert("Successfully")
+        form.querySelectorAll('input').forEach(function(e){
+        e.value = ""
+        })
+        form.querySelectorAll('select').forEach(function(e){
+        e.value = ""
+        })
+        form.querySelector('textarea').value = ""
+        window.location = window.location.origin
+        }
+        else{
+        alert("Please check and dial again with this phone number previously registered")
+        }
+    }
+}
+http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+http.send(fd)
+})
+
+</script>
 </body>
 </html>

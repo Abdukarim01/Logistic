@@ -293,5 +293,29 @@ element.forEach((e)=>{
           }
   })  
 })
+let form = document.querySelector("#form");
+form.addEventListener("submit", e=>{
 
-
+let fd = new URLSearchParams(Array.from(new FormData(form))).toString()
+e.preventDefault();
+var http = new XMLHttpRequest();
+http.open('POST', '', true)
+http.onreadystatechange = function(){
+    if (http.readyState === 4 && http.status === 200) {
+        let res = JSON.parse(this.response)
+        if (res.status == 200){
+        alert("Successfully")
+        form.querySelectorAll('input').forEach(function(e){
+        e.value = ""
+        e.checked = false
+        })
+        form.querySelector('textarea').value = ""
+        }
+        else{
+        alert("Please check with this phone number previously requested and ask again")
+        }
+    }
+}
+http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+http.send(fd)
+})
