@@ -116,6 +116,20 @@
             </div>
         </div>
     </section>
+    <div class="alert">
+        <div class="alert_block">
+            <div class="alert_item">
+                <i class="fa fa-check">
+                    
+                </i>
+            </div>
+            <div class="alert_text">
+                <p>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
 <script>
 let form = document.querySelector("#form2");
 form.addEventListener("submit", e=>{
@@ -128,7 +142,12 @@ http.onreadystatechange = function(){
     if (http.readyState === 4 && http.status === 200) {
         let res = JSON.parse(this.response)
         if (res.status == 200){
-        alert("Successfully")
+        document.querySelector(".alert").classList = "alert for_alert"
+        document.querySelector(".alert_item").querySelector("i").classList = "fa fa-check"
+        document.querySelector(".alert_text").querySelector("p").innerHTML = "Successfully"
+        document.querySelector(".alert").onclick = function(){
+        document.querySelector(".alert").className = "alert"
+        }
         form.querySelectorAll('input').forEach(function(e){
         e.value = ""
         })
@@ -136,10 +155,20 @@ http.onreadystatechange = function(){
         e.value = ""
         })
         form.querySelector('textarea').value = ""
-        window.location = window.location.origin
+        setTimeout(()=>{
+            window.location = window.location.origin
+        },2000)
         }
         else{
-        alert("Please check and dial again with this phone number previously registered")
+            
+        document.querySelector(".alert").classList = "alert for_alert"
+        document.querySelector(".alert_item").style = "color:red;"
+        document.querySelector(".alert_item").querySelector("i").classList = "fa fa-times"
+        document.querySelector(".alert_text").querySelector("p").innerHTML = "Please check with this phone number previously requested and ask again"
+        document.querySelector(".alert").onclick = function(){
+        document.querySelector(".alert").className = "alert"
+        }    
+
         }
     }
 }

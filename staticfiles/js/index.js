@@ -1,5 +1,3 @@
-
-
 if ( window.history.replaceState ) {
   window.history.replaceState( null, null, window.location.href );
   }
@@ -9,22 +7,23 @@ document.body.onload = function (){
 }
 
 
-function randomValues() {
-  anime({
-    targets: '.cursor',
-    translateX: function() {
-      return -anime.random(0, 500);
-    },
-     translateY: function() {
-      return -anime.random(0, 800);
-    },
-    easing: 'easeInOutQuad',
-    duration: 750,
-    complete: randomValues,
+// function randomValues() {
+//   anime({
+//     targets: '.cursor',
+//     translateX: function() {
+//       return -anime.random(0, 500);
+//     },
+//      translateY: function() {
+//       return -anime.random(0, 800);
+//     },
+//     easing: 'easeInOutQuad',
+//     duration: 750,
+//     complete: randomValues,
   
-  });
-}
-randomValues()
+//   });
+// }
+// randomValues()
+
 
 var acc = document.querySelectorAll(".swiper_carts");
 var i;
@@ -125,7 +124,14 @@ cards.forEach((e,index)=>{
 })
 /* ENDANIM4 */
 
-});
+if(Math.ceil(window.scrollY) >= 800){
+  document.querySelector(".to_top").classList = "to_top for_top"
+}
+else{
+  document.querySelector(".to_top").className = "to_top"
+}
+
+})  ;
 
 /* HEADER NAVBAR CONTROL */
 let num = 0;
@@ -304,7 +310,13 @@ http.onreadystatechange = function(){
     if (http.readyState === 4 && http.status === 200) {
         let res = JSON.parse(this.response)
         if (res.status == 200){
-        alert("Successfully")
+        document.querySelector(".alert").classList = "alert for_alert"
+        document.querySelector(".alert_item").querySelector("i").classList = "fa fa-check"
+        document.querySelector(".alert_text").querySelector("p").innerHTML = "Successfully"
+        document.querySelector(".alert").onclick = function(){
+        document.querySelector(".alert").className = "alert"
+        }
+    
         form.querySelectorAll('input').forEach(function(e){
         e.value = ""
         e.checked = false
@@ -312,10 +324,18 @@ http.onreadystatechange = function(){
         form.querySelector('textarea').value = ""
         }
         else{
-        alert("Please check with this phone number previously requested and ask again")
+        document.querySelector(".alert").classList = "alert for_alert"
+        document.querySelector(".alert_item").style = "color:red;"
+        document.querySelector(".alert_item").querySelector("i").classList = "fa fa-times"
+        document.querySelector(".alert_text").querySelector("p").innerHTML = "Please check with this phone number previously requested and ask again"
+        document.querySelector(".alert").onclick = function(){
+        document.querySelector(".alert").className = "alert"
+        }
+        
         }
     }
 }
 http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
 http.send(fd)
 })
+

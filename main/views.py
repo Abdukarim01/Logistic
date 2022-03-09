@@ -9,7 +9,6 @@ from django.views.decorators.csrf import csrf_exempt
 @csrf_exempt
 def home(request):
     data = {}
-    print(request.POST)
     if request.method == 'POST':
         form = QuoteModelForms(request.POST)
         form.save(commit=False)
