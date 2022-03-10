@@ -17,10 +17,7 @@ class QuoteModel(models.Model):
         return self.name
 
 class Drivers(models.Model):
-    PREVIUS_EMPLOYER = (
-                        ('previus_employer','Previus employer'),
-                        ('usdot_number','USDOT number'),
-                            )
+
     WHICH_POSITION = (
                         ('solo_driver','Solo Driver'),
                         ('team_driver','Team driver'),
@@ -34,7 +31,7 @@ class Drivers(models.Model):
     state                  =  models.CharField(verbose_name="state",max_length=50)
     driving_information    =  models.TextField(verbose_name="driving information")
     how_many_years         =  models.TextField(verbose_name="how_many_years")
-    previus_employer       =  models.CharField(verbose_name="Previus employer",max_length=50,choices=PREVIUS_EMPLOYER)
+    previus_employer       =  models.IntegerField(verbose_name="driver license")
     which_position         =  models.CharField(verbose_name="Which position are you interested in?",max_length=50,choices=WHICH_POSITION )
 
     def __str__(self):

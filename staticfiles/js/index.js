@@ -6,25 +6,6 @@ document.body.onload = function (){
        document.getElementById("form_register").reset()
 }
 
-
-// function randomValues() {
-//   anime({
-//     targets: '.cursor',
-//     translateX: function() {
-//       return -anime.random(0, 500);
-//     },
-//      translateY: function() {
-//       return -anime.random(0, 800);
-//     },
-//     easing: 'easeInOutQuad',
-//     duration: 750,
-//     complete: randomValues,
-  
-//   });
-// }
-// randomValues()
-
-
 var acc = document.querySelectorAll(".swiper_carts");
 var i;
 

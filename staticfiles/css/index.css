@@ -496,7 +496,10 @@ a:hover{color:inherit;}
 .grid_input_in:nth-child(8){flex:100%; min-width: 100%;}
 .grid_input_in:nth-child(9){flex:100%; min-width: 100%;}
 
-.grid_input_in:nth-child(9) select{clip-path: polygon(1% 0, 100% 0, 100% 15%, 99% 100%, 0 100%, 0 85%);}
+.grid_input_in:nth-child(9) input{clip-path: polygon(1% 0, 100% 0, 100% 0%, 99% 100%, 0 100%, 0 100%); padding-right:2%;}
+.grid_input_in:nth-child(4) input{padding-right:2%;}
+.grid_input_in:nth-child(5) input{padding-right:2%;}
+.grid_input_in input{outline: none;}
 .grid_input_in select{outline: none;}
 
 .grid_input_in:nth-child(7) textarea{clip-path: polygon(1% 0, 100% 0, 100% 15%, 99% 100%, 0 100%, 0 85%);

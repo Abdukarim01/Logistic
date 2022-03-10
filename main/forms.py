@@ -31,3 +31,4 @@ class RegisterModelForms(ModelForm):
         self.fields['state'].widget.attrs['placeholder'] = 'State'
         self.fields['driving_information'].widget.attrs['placeholder'] = 'Driving information'
         self.fields['how_many_years'].widget.attrs['placeholder'] = 'How many years of verifiable commercial truck driving experience do you have?'
+        self.fields['previus_employer'].widget.attrs['placeholder'] = 'Previus employer'
