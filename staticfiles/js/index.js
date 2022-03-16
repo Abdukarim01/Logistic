@@ -284,6 +284,7 @@ let form = document.querySelector("#form");
 form.addEventListener("submit", e=>{
 
 let fd = new URLSearchParams(Array.from(new FormData(form))).toString()
+
 e.preventDefault();
 var http = new XMLHttpRequest();
 http.open('POST', '', true)

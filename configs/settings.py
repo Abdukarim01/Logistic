@@ -73,15 +73,11 @@ WSGI_APPLICATION = 'configs.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
+import os
 DATABASES = {
     'default': {
-         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-         'NAME': 'logistic',
-         'USER': 'postgres',
-         'PASSWORD': '14032004',
-         'HOST': 'localhost',
-         'PORT': '5432',
+         'ENGINE': 'django.db.backends.sqlite3',
+          'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 

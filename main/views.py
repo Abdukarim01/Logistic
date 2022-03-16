@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render
 from .forms import QuoteModelForms,RegisterModelForms
 from .bot import send_form_bot,send_form_bot_drivers
 from .models import QuoteModel,Drivers

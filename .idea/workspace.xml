@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="fe6d2b69-8b88-4591-830a-3842e4e4c0ac" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/configs/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/bot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/staticfiles/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +42,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WEB/amaliy/3nomoz_vaqti_bot" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
