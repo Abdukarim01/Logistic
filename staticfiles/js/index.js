@@ -284,7 +284,7 @@ let form = document.querySelector("#form");
 form.addEventListener("submit", e=>{
 
 let fd = new URLSearchParams(Array.from(new FormData(form))).toString()
-
+document.querySelector(".loader").style.display = "flex"
 e.preventDefault();
 var http = new XMLHttpRequest();
 http.open('POST', '', true)
@@ -297,6 +297,7 @@ http.onreadystatechange = function(){
         document.querySelector(".alert_text").querySelector("p").innerHTML = "Successfully"
         document.querySelector(".alert").onclick = function(){
         document.querySelector(".alert").className = "alert"
+        document.querySelector(".loader").style.display = "none"
         }
     
         form.querySelectorAll('input').forEach(function(e){
@@ -312,6 +313,7 @@ http.onreadystatechange = function(){
         document.querySelector(".alert_text").querySelector("p").innerHTML = "Please check with this phone number previously requested and ask again"
         document.querySelector(".alert").onclick = function(){
         document.querySelector(".alert").className = "alert"
+        document.querySelector(".loader").style.display = "none"
         }
         
         }

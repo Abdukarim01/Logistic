@@ -31,7 +31,8 @@ class Drivers(models.Model):
     state                  =  models.CharField(verbose_name="state",max_length=50)
     driving_information    =  models.TextField(verbose_name="driving information")
     how_many_years         =  models.TextField(verbose_name="how_many_years")
-    previus_employer       =  models.IntegerField(verbose_name="driver license")
+    # previus_employer       =  models.IntegerField(verbose_name="driver license")
+    previus_employer       =  models.CharField(verbose_name="driver license", max_length=500)
     which_position         =  models.CharField(verbose_name="Which position are you interested in?",max_length=50,choices=WHICH_POSITION )
 
     def __str__(self):

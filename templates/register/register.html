@@ -34,7 +34,7 @@
                 <h1>Driver jobs</h1>
             </div>
             <div class="modal_text">
-                <p>The truck driving industry has experienced significant growth over the past few decades. As consumer demand continues to raise the need for qualified freight  drivers, there’s never been a better time to consider truck driving jobs. Join our team and find out why drivers love working for Fastplus Cargo.</p>
+                <p>The truck driving industry has experienced significant growth over the past few decades. As consumer demand continues to raise the need for qualified freight  drivers, there’s never been a better time to consider truck driving jobs. Join our team and find out why drivers love working at Fastplus Cargo.</p>
             </div>
             <div class="modal_apply">
                 <div class="modal_title">
@@ -94,7 +94,7 @@
                             </div>
                             <div class="grid_input_in" >
                                 <label>
-                                    Previus employer
+                                    Previous employer
                                 </label>
                                 {{form.previus_employer}}        
                             </div>
@@ -130,11 +130,24 @@
             </div>
         </div>
     </div>
+    <div class="loader">
+        <div class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
 <script>
 let form = document.querySelector("#form2");
 form.addEventListener("submit", e=>{
 
 let fd = new URLSearchParams(Array.from(new FormData(form))).toString()
+document.querySelector(".loader").style.display = "flex"
 e.preventDefault();
 var http = new XMLHttpRequest();
 http.open('POST', '', true)
@@ -147,6 +160,8 @@ http.onreadystatechange = function(){
         document.querySelector(".alert_text").querySelector("p").innerHTML = "Successfully"
         document.querySelector(".alert").onclick = function(){
         document.querySelector(".alert").className = "alert"
+        document.querySelector(".loader").style.display = "none"
+
         }
         form.querySelectorAll('input').forEach(function(e){
         e.value = ""
@@ -167,6 +182,8 @@ http.onreadystatechange = function(){
         document.querySelector(".alert_text").querySelector("p").innerHTML = "Please check with this phone number previously requested and ask again"
         document.querySelector(".alert").onclick = function(){
         document.querySelector(".alert").className = "alert"
+        document.querySelector(".loader").style.display = "none"
+
         }    
 
         }
