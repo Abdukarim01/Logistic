@@ -12,7 +12,7 @@ def home(request):
     if request.method == 'POST':
         form = QuoteModelForms(request.POST)
         form.save(commit=False)
-        if not QuoteModel.objects.filter(tel=request.POST.get('tel')):
+        try:
             if form.is_valid():
                 form.save(commit=True)
                 send_form_bot('Quote',form.data.get('name'),form.data.get('email'),form.data.get('tel'),form.data.get('company_name'),form.data.get('mc'),form.data.get('dry_van'),form.data.get('reefer'),form.data.get('flat_bed'),form.data.get('message'),form.data.get('need_driver_assistence'))
@@ -20,7 +20,7 @@ def home(request):
                 return JsonResponse(data)
             else:
                 pass
-        else:
+        except:
             data['status'] = 100
             return JsonResponse(data)
     else:
@@ -36,7 +36,7 @@ def register(request):
     if request.method == "POST":
         form = RegisterModelForms(request.POST)
         form.save(commit=False)
-        if not Drivers.objects.filter(phone=request.POST.get('phone')):
+        try:
             if form.is_valid():
                 data['status'] = 200
                 form.save(commit=True)
@@ -44,7 +44,7 @@ def register(request):
                 return JsonResponse(data)
             else:
                 pass
-        else:
+        except:
             data['status'] = 100
             return JsonResponse(data)
     else:   
